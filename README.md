@@ -1,4 +1,4 @@
-# Calculator Test Framework
+
 
 This is a basic test automation framework built with **Java 17**, **Selenium WebDriver**, and **TestNG**.  
 It was built for interview purposes. 
