@@ -18,6 +18,9 @@ public class ForYouPage extends BasePage{
     @FindBy(xpath = "//div[./h3[text()='Contact']]")
     private ContactComponentPage contactSection;
 
+    @FindBy(linkText = "Career")
+    private WebElement careerLink;
+
     ForYouPage(){
         super();
         contactSection = new ContactComponentPage();
@@ -31,5 +34,9 @@ public class ForYouPage extends BasePage{
         WebDriverWait wait = new WebDriverWait(DriverManager.getWebDriver(), Duration.ofSeconds(5));
         wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("#menu-en-carrer li")));
         return ElementUtils.getVisibleTexts(topMenuItems);
+    }
+    public CareerPage navigateToCareerPage(){
+        careerLink.click();
+        return new CareerPage();
     }
 }

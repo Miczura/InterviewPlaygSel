@@ -8,7 +8,7 @@
     </test>
     <test name="Validate contact form test">
         <classes>
-            <class name="org.example.tests.NewDummyTest"/>
+            <class name="org.example.tests.ValidateRequiredFieldsJobOfferTest"/>
         </classes>
     </test>
 </suite>
