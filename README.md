@@ -17,6 +17,7 @@ It was built for interview purposes.
 - **Supports Chrome and Firefox browsers:** Chrome will be selected by default
 - **Supports parallel test execution:** 2 threads by default for faster feedback.
 - **Automatic WebDriver management:** Drivers are downloaded and managed automatically by Selenium.
+- **Basic screenshot capture on test fail:** png files will be stored in /screenshots directory.
 - **Basic reporting:** /target/surefire-reports/emailable-report.html.
 
 
