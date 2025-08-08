@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="AllTestsSuite"  parallel="classes" thread-count="2">
-    <test name="SampleTest">
+<suite name="AllTestsSuite"  parallel="methods" thread-count="2">
+    <test name="Validate top bar and footer test">
         <classes>
-            <class name="org.example.tests.DummyTest"/>
+            <class name="org.example.tests.ValidateTopBarAndFooterTest"/>
+        </classes>
+    </test>
+    <test name="Validate contact form test">
+        <classes>
             <class name="org.example.tests.NewDummyTest"/>
         </classes>
     </test>
