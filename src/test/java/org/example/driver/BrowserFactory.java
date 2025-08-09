@@ -13,17 +13,17 @@ public class BrowserFactory {
     public static WebDriver getBrowser(BrowserType browserType) {
         switch (browserType) {
             case CHROME:
-                ChromeOptions options = new ChromeOptions();
-                options.addArguments("--lang=en");
-                return new ChromeDriver(options);
+//                ChromeOptions options = new ChromeOptions();
+//                options.addArguments("--lang=en");
+                return new ChromeDriver();
             case FIREFOX:
 
-                FirefoxProfile profile = new FirefoxProfile();
-                profile.setPreference("intl.accept_languages", "en");
-
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-                firefoxOptions.setProfile(profile);
-                return new FirefoxDriver(firefoxOptions);
+//                FirefoxProfile profile = new FirefoxProfile();
+//                profile.setPreference("intl.accept_languages", "en");
+//
+//                FirefoxOptions firefoxOptions = new FirefoxOptions();
+//                firefoxOptions.setProfile(profile);
+                return new FirefoxDriver();
 
             default:
                 throw new IllegalArgumentException(MESSAGE_UNKNOWN_BROWSER);
