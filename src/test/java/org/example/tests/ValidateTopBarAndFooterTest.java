@@ -38,7 +38,8 @@ public class ValidateTopBarAndFooterTest extends TestBase{
         MainPage page = new MainPage();
         ContactComponentPage contactSection =page
                 .navigateToBusinessPage()
-                .getContactSection();
+                .getContactSection()
+                .scrollIntoContactSection();
         //Then
         Assert.assertEquals(contactSection.retrieveAddress(),expectedAddress, "Address do not match");
         Assert.assertEquals(contactSection.getPhoneNumber(),expectedPhoneNumber, "Phone number do not match");
@@ -52,7 +53,7 @@ public class ValidateTopBarAndFooterTest extends TestBase{
         MainPage page = new MainPage();
         List<String> actualVisibleLinkTexts =page.navigateToForYouPage()
                 .getVisibleTopMenuTexts();
-//        actualVisibleLinkTexts.forEach(System.out::println);
+
         //Then
         Assert.assertEquals(actualVisibleLinkTexts, expectedVisibleLinkTexts, "Some of the visible link elements are different than expected");
     }
@@ -64,7 +65,8 @@ public class ValidateTopBarAndFooterTest extends TestBase{
         MainPage page = new MainPage();
         ContactComponentPage contactSection =page
                 .navigateToForYouPage()
-                .getContactSection();
+                .getContactSection()
+                .scrollIntoContactSection();
         //Then
         Assert.assertEquals(contactSection.retrieveAddress(),expectedAddress,  "Address do not match");
         Assert.assertEquals(contactSection.getPhoneNumber(),expectedPhoneNumber, "Phone number do not match");

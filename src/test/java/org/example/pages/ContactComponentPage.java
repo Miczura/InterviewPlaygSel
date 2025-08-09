@@ -1,9 +1,12 @@
 package org.example.pages;
 
+import org.example.utils.ElementUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ContactComponentPage extends BasePage{
+    @FindBy(xpath = "//div[./h3[text()='Contact']]")
+    private WebElement contactSection;
     @FindBy(css= "div.icon-address")
     private WebElement address;
     @FindBy(css = "div.icon-phone.d-md-block")
@@ -23,5 +26,9 @@ public class ContactComponentPage extends BasePage{
     }
     public String getEmail(){
         return email.getText();
+    }
+    public ContactComponentPage scrollIntoContactSection(){
+        ElementUtils.scrollToElement(contactSection);
+        return this;
     }
 }
