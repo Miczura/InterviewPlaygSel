@@ -15,7 +15,6 @@ public class ForYouPage extends BasePage{
     @FindBy(css = "#menu-en-carrer li")
     private List<WebElement> topMenuItems;
 
-    @FindBy(xpath = "//div[./h3[text()='Contact']]")
     private ContactComponentPage contactSection;
 
     @FindBy(linkText = "Career")

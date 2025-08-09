@@ -13,7 +13,7 @@ public class BusinessPage extends BasePage{
     @FindBy(css = "#menu-en-business li")
     private List<WebElement> topMenuItems;
 
-    @FindBy(xpath = "//div[./h3[text()='Contact']]")
+
     private ContactComponentPage contactSection;
 
     public BusinessPage(){
